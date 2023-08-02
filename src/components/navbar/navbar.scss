@@ -1,0 +1,80 @@
+@import "../../styles/responsive.scss";
+
+.navbar {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    gap: 10px;
+  }
+  .icon {
+    filter: invert(70%) sepia(100%) saturate(7500%) hue-rotate(10deg) brightness(100%) contrast(100%);
+  }
+}
+  .icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .icon{
+      @include sm{
+        display: none;
+      }
+    }
+
+    .notification {
+      position: relative;
+
+      span {
+        background-color: red;
+        color: black;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+      }
+    }
+
+    .user {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      img {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+  }
+
+@font-face {
+  font-family: 'FabricMDL2Icons';
+  src: url('path/to/fabric-icons.eot');
+  src: url('path/to/fabric-icons.eot?#iefix') format('embedded-opentype'),
+       url('path/to/fabric-icons.woff') format('woff2'),
+       url('path/to/fabric-icons.woff2') format('woff'),
+       url('path/to/fabric-icons.ttf') format('truetype'),
+       url('path/to/fabric-icons.svg#FabricMDL2Icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fluent-icon {
+  font-family: 'FabricMDL2Icons' !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
